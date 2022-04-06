@@ -1,5 +1,5 @@
 baseurl = "/"
-title = "Test"
+title = "ChaosEco"
 languageCode = "en-us"
 paginate = "10" # Number of posts per page
 theme = "mainroad"
