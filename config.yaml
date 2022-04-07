@@ -27,7 +27,8 @@ menu:
   main:
     - name: "Post"
       url: "/post/"
-      weight: 10
+      weight: 1
+      sidebar: false
     - name: "Project"
       url: "/project/"
       weight: 20

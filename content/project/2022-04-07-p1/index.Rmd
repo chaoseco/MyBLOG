@@ -1,0 +1,12 @@
+---
+title: p1
+author: 'chao '
+date: '2022-04-07'
+slug: p1
+categories:
+  - ''
+tags:
+  - ''
+description: ''
+thumbnail: ''
+---
