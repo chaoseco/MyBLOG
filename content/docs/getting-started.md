@@ -11,7 +11,7 @@ sidebar: false
 tags:
 - Installation
 title: Getting started
-weight: 1
+weight: 60
 ---
 
 Welcome to the Mainroad theme documentation. This quick start guide covers Mainroad theme installation and minimal
