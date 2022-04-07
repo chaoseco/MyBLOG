@@ -26,10 +26,10 @@ permalinks:
 menu:
   main:
     - name: "Post"
-      url: "post/"
+      url: "/post/"
       weight: 10
     - name: "Project"
-      url: "project/"
+      url: "/project/"
       weight: 20
 
   
