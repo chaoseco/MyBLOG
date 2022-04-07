@@ -11,6 +11,7 @@ hasCJKLanguage: true
 enableEmoji: true
 rssLimit: 100
 
+
 Author:
   avatar: img/avatar.png
   bio: Nothing known.
@@ -18,24 +19,26 @@ Author:
   
   
 permalinks:
-  cn: "/:sections/:year/:month/:slug/"
-  en: "/:sections/:year/:month/:slug/"
+  posts = "/post/:year-:month-:slug/"
+  projects = "/project/:year-:slug/"
   
 
 menu:
   main:
-    - identifier: "posts"
-    - name: "Blog"
-    - url: "/posts/"
-    - weight: 1
+    - name: "Post"
+      url: "post/"
+      weight: 10
+    - name: "Project"
+      url: "project/"
+      weight: 20
 
   
 Params:
   authorbox: yes
   description: "Personal website of Chao Xu"
   logo:
-    image: img/placeholder.png
-    title: Chaoseco
+    image: "img/placeholder.png"
+    title: "Chaoseco"
     subtitle: "Life Recording"
   mainSections:
     - post
@@ -51,7 +54,7 @@ Params:
     list: right
     single: right
     widgets:
-   #   - search
+      - search
       - recent
       - categories
       - taglist
