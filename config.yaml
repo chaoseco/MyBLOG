@@ -1,20 +1,42 @@
 baseurl: /
-title: Mainroad
-languageCode: en-us
+title: "ChaosEco"
+languageCode: "en-us"
 paginate: '10'
-theme: Mainroad
-disqusShortname: ''
+theme: "Mainroad"
+disqusShortname: 'chaoseco'
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 googleAnalytics: ''
+footnotereturnlinkcontents: "↩"
+hasCJKLanguage: true
+enableEmoji: true
+rssLimit: 100
+
 Author:
   avatar: img/avatar.png
   bio: Nothing known.
   name: Chao Xu
+  
+  
+permalinks:
+  cn: "/:sections/:year/:month/:slug/"
+  en: "/:sections/:year/:month/:slug/"
+  
+
+menu:
+  main:
+    - identifier: "posts"
+    - name: "Blog"
+    - url: "/posts/"
+    - weight: 1
+
+  
 Params:
   authorbox: yes
-  description: Chao Xu's personal blog about everything
+  description: "Personal website of Chao Xu"
   logo:
     image: img/placeholder.png
     title: Chaoseco
+    subtitle: "Life Recording"
   mainSections:
     - post
     - docs
@@ -25,7 +47,7 @@ Params:
     - categories
   readmore: no
   sidebar: 
-    home: right
+    home: left
     list: right
     single: right
     widgets:
