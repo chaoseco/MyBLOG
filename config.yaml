@@ -1,0 +1,39 @@
+baseurl: /
+title: Mainroad
+languageCode: en-us
+paginate: '10'
+theme: Mainroad
+disqusShortname: ''
+googleAnalytics: ''
+Author:
+  avatar: img/avatar.png
+  bio: Nothing known.
+  name: Chao Xu
+Params:
+  authorbox: yes
+  description: Chao Xu's personal blog about everything
+  logo:
+    image: img/placeholder.png
+    title: Chaoseco
+  mainSections:
+    - post
+    - docs
+  opengraph: yes
+  pager: yes
+  post_meta:
+    - date
+    - categories
+  readmore: no
+  sidebar: 
+    home: right
+    list: right
+    single: right
+    widgets:
+   #   - search
+      - recent
+      - categories
+      - taglist
+  twitter_cards: no
+  widgets:
+    recent_num: 5
+    tags_counter: no
