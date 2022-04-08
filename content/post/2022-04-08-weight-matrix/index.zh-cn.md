@@ -1,0 +1,43 @@
+---
+title: Creating spatial weight matrix using Geoda and Stata
+author: Chaoseco
+date: '2022-04-08'
+slug: weight-matrix
+categories:
+  - GIS
+tags:
+  - GeoDa
+  - Stata
+  - Weight matrix
+description: ''
+thumbnail: ''
+---
+
+先使用Geoda生成gal文件，然后使用下面的stata commands来生成空间加权矩阵文件：
+
+```stata
+ssc install spwmatrix
+
+* remove the first and last lines of the txt file spwmatrix import using
+spwmatrix import using C:\Users\*USER*\Desktop\Tutorial\Weights_file.gal, wname(weights) xport(weights, txt)
+
+insheet using "C:\Users\*USER*\Desktop\Tutorial\weights.txt", delim(" ") clear
+save "weights.dta"
+
+gen id = _n
+order id, first
+
+rename v(#) m(#)
+rename v(##) m(##)
+rename v(###) m(###)
+
+gsort -id
+drop id
+
+gen id = _n
+order id, first
+```
+
+Source:
+[[Source 1](https://drive.google.com/file/d/0By5qMMVfcc4jRHJfNExjUV9pd2c/view)]
+[[Source 2](https://www.youtube.com/watch?v=54HoO0KgWLQ&t=1178s&index=2&list=FLmPcw83WfcCSrQxTt4FSI_Q)]
