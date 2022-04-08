@@ -72,13 +72,14 @@ Params:
       - recent
       - categories
       - taglist
+      - social
   twitter_cards: no
   widgets:
     recent_num: 5
     tags_counter: no
     social:
-      github: "chaoseco"
-      email: "chao.xuchao@hotmail.com"
+      github: "https://github.com/chaoseco"
+      email: "chaoseco@fake.com"
   logo:
     # image: "img/avatar1.jpg"
     title: "Chaoseco"
@@ -88,5 +89,5 @@ Params:
     - categories
   style:
     vars:
-      highlightColor: "#a80000" # 页面高亮 (链接等) 颜色
+      highlightColor: "#d60000" # 页面高亮 (链接等) 颜色
 
