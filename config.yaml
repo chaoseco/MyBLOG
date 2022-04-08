@@ -1,19 +1,25 @@
 baseurl: /
 title: "ChaosEco"
-languageCode: "en-us"
-paginate: '10'
 theme: "Mainroad"
+
+# 中文显示配置
+languageCode: "zh-cn"
+DefaultContentLanguage: "zh-cn"
+hasCJKLanguage: true
+enableEmoji: true
+
+# 每页显示多少条博文标题
+paginate: '10'
+
 disqusShortname: 'chaoseco'
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$", "\\.knit\\.md$", "\\.utf8\\.md$"]
 googleAnalytics: ''
 footnotereturnlinkcontents: "↩"
-hasCJKLanguage: true
-enableEmoji: true
 rssLimit: 100
 
 
 Author:
-  avatar: img/avatar.png
+  avatar: img/avatar1.jpg
   bio: Nothing known.
   name: Chao Xu
   
@@ -25,33 +31,38 @@ permalinks:
 
 menu:
   main:
-    - name: "Home"
+    - name: "首页"
+      identifier: "mainpage"
       url: "/"
-      weight: 1
-    - name: "Post"
+      weight: 10
+    - name: "文章列表"
+      identifier: "posts"
       url: "/post/"
-      weight: 2
-    - name: "Project"
-      url: "/project/"
-      weight: 3
+      weight: 20
+    - name: "所有分类"
+      identifier: "categories"
+      url: "/categories/"
+      weight: 30
+    - name: "所有标签"
+      identifier: "tags"
+      url: "/tags/"
+      weight: 40
+    - name: "关于我"
+      identifier: "about"
+      url: "/about/"
+      weight: 50
+      
 
-  
 Params:
   authorbox: yes
   description: "Personal website of Chao Xu"
-  logo:
-    image: "img/avatar1.jpg"
-    title: "Chaoseco"
-    subtitle: "Life Recording"
   mainSections:
     - post
     - docs
   opengraph: yes
   pager: yes
-  post_meta:
-    - date
-    - categories
-  readmore: no
+  googleFontsLink: "/res/font/opensans/opensans.css"
+  readmore: true
   sidebar: 
     home: right   # Configure layout for home page
     list: false   # Configure layout for list pages: right/left/false
@@ -65,3 +76,17 @@ Params:
   widgets:
     recent_num: 5
     tags_counter: no
+    social:
+      github: "chaoseco"
+      email: "chao.xuchao@hotmail.com"
+  logo:
+    # image: "img/avatar1.jpg"
+    title: "Chaoseco"
+    subtitle: "Life Recording"
+  post_meta:
+    - date
+    - categories
+  style:
+    vars:
+      highlightColor: "#800080" # 页面高亮 (链接等) 颜色
+
