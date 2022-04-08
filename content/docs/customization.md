@@ -5,7 +5,7 @@ description: Describes common Mainroad theme configuration parameters that can b
   adjusted via config file or via Front Matter section.
 lead: Describes common Mainroad theme configuration parameters that can be adjusted
   via config file or via Front Matter section.
-menu: main
+<!--menu: main-->
 pager: false
 sidebar: false
 thumbnail:

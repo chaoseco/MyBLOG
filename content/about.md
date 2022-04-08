@@ -1,7 +1,7 @@
 ---
 authorbox: true
 date: "2022-01-25T14:00:00.000Z"
-menu: main
+<!--menu: main-->
 sidebar: false
 title: About
 ---

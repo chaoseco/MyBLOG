@@ -9,6 +9,7 @@ tags:
   - test
 description: ''
 thumbnail: ''
+sidebar: false ## add/remove side bar: right/left/false
 ---
 
 test test

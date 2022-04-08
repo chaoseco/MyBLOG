@@ -5,7 +5,6 @@ description: This article helps you get started with the Mainroad theme, includi
   installation and minimal configuration.
 lead: This article helps you get started with the Mainroad theme, including installation
   and minimal configuration.
-menu: main
 pager: false
 sidebar: false
 tags:

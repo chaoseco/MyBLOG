@@ -28,17 +28,16 @@ menu:
     - name: "Post"
       url: "/post/"
       weight: 1
-      sidebar: false
     - name: "Project"
       url: "/project/"
-      weight: 20
+      weight: 2
 
   
 Params:
   authorbox: yes
   description: "Personal website of Chao Xu"
   logo:
-    image: "img/placeholder.png"
+    image: "img/avatar1.png"
     title: "Chaoseco"
     subtitle: "Life Recording"
   mainSections:
@@ -51,9 +50,9 @@ Params:
     - categories
   readmore: no
   sidebar: 
-    home: left
-    list: right
-    single: right
+    home: right   # Configure layout for home page
+    list: false   # Configure layout for list pages: right/left/false
+    single: false # Configure layout for single pages
     widgets:
       - search
       - recent
