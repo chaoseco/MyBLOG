@@ -1,0 +1,113 @@
+---
+title: 基于Anusplin的气象插值
+author: Chaoseco
+date: '2022-04-08'
+slug: index.zh-cn
+categories:
+  - GIS
+tags:
+  - Anusplin
+description: ''
+thumbnail: ''
+---
+
+##### 1. Ausplin需要的插值数据格式如图1所示：
+![数据格式](/Anusplin/fig1.png "数据格式")
+
+
+
+##### 2. Ausplin需要以m为单位的经纬度，因此，在arcgis中需要将dem数据进行投影转换为m为单位的投影坐标系（例如：WGS_1984_UTM_Zone_50N，50N为广东所在经度zone）。通常下载的SRTM高程数据只有坐标信息（GCS_WGS_1984）没有投影信息，应做如下转换（图2）：
+![投影转换](/Anusplin/fig2.png "投影转换")
+
+
+
+##### 3. 通过File->Add Data->Add XY Data（图3），将气象监测站点加载到arcgis中（注意：Geographic Coordinate System应该为 GCS_WGS_1984，因为监测站的经纬度信息是用度记录的，而不是m）。
+![气象站点输入](/Anusplin/fig3.png "气象站点输入")
+
+
+
+##### 4. 将加载后的站点分布export为shapefile，之后使用投影转换为WGS_1984_UTM_Zone_50N，与dem保持一致（图4）。
+![站点投影坐标转换](/Anusplin/fig4.png "站点投影坐标转换")
+
+
+
+##### 5. 重新计算站点的坐标信息x, y为以m为单位（图5）。并通过Extract multi values to points 工具提取站点的高程值。之后，导出为xls文件。
+![计算坐标](/Anusplin/fig5.png "计算坐标")
+
+
+
+##### 6. 使用SPSS打开xls文件，并按照图6组织数据（注意station id格式为string）:
+![SPSS数据格式设置](/Anusplin/fig6.png "SPSS数据格式设置")
+
+
+
+##### 7. 将文件save as固定ASCII码格式的 .dat文件，并记录SPSS log文件中的Format信息以备后面使用（图7）。
+![dat文件数据格式信息](/Anusplin/fig7.png "dat文件数据格式信息")
+
+
+
+##### 8. 将重新投影后的dem文件转为ASCII格式。
+
+
+
+##### 9. 按照如下准备插值脚本：
+Splina脚本如下：
+```
+hktem   #输出表明名
+0  #插值的单位，0表示无单位
+2  #自变量的个数，这里指经纬度
+1  #协变量的个数，这里指dem，注意也可以将高程设置为自变量，不用协变量
+0
+0
+173352.1 237121.9 0 1   ##前两数是对应dem文件中经度的范围（在arcgis中的source看），但要比dem中的范围要大一点才行
+2447510.7 2502840.3 0 1  ##前两数是对应dem文件中纬度的范围，但也要比dem中的范围要大一点才行
+-67 956 1 1  ##前两数dem文件的上下限
+1000  ##dem单位转换，m转为km
+0
+2
+1  ##需要插值的个数，这是是对年进行插值，故是1个。如为批量插值，例如每月插值，则为12
+0
+1
+1
+hktem.dat  ## dat文件
+50  ##站点的个数，可以设置的比实际站点数量大些
+3  #标签的宽度，我们的站点都是三位数的，所以是3
+(a12,f12.4,f12.4,f12.2,f12.1) #数据的格式，与上面spss的输出日志保持一致。如为批量插值，最后的f12.1可写为12f12.1
+hktem.res
+hktem.opt
+hktem.sur
+hktem.lis
+hktem.cov
+#空行
+
+```
+
+Lapgrd脚本如下：
+```
+hktem.sur  ## splina 输出的sur文件名
+0
+1
+
+1
+1
+173352.137314 237121.814760 30.25127014  ##前两个是dem文件中的经度范围，30.25127014：插值的分辨率（必须与dem文件一样）
+2
+2447510.70639 2502840.279470 30.25127014  ##前两个是dem中的纬度范围
+0
+2
+hkdem.txt  #ascii码的dem文件名称
+2
+-9999   #DEM中Nodata定义
+hktem.grd  #输出grd文件名，如果批量插值，罗列相应数量的文件名
+#要有一个空行
+
+```
+将上述代码分别复制到记事本中，然后更改后缀为.cmd文件，分别命名为interpolation_s.cmd和interpolation_l.cmd（注意#后的解释文字要删除）。
+
+##### 10. 新建如下脚本，命名为run.cmd。
+```
+splina<interpolation_s.cmd>interpolation_s.log
+lapgrd<interpolation_l.cmd>interpolation_l.log
+```
+
+##### 11. 将上述所有数据及文件放到Anusplin程序所在文件夹中，双击run.cmd运行，即可得到结果。 输出文件为 .grd格式，可用arcgis中raster to other formats 转为其他格式文件。
