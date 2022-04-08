@@ -25,19 +25,22 @@ permalinks:
 
 menu:
   main:
+    - name: "Home"
+      url: "/"
+      weight: 1
     - name: "Post"
       url: "/post/"
-      weight: 1
+      weight: 2
     - name: "Project"
       url: "/project/"
-      weight: 2
+      weight: 3
 
   
 Params:
   authorbox: yes
   description: "Personal website of Chao Xu"
   logo:
-    image: "img/avatar1.png"
+    image: "img/avatar1.jpg"
     title: "Chaoseco"
     subtitle: "Life Recording"
   mainSections:
