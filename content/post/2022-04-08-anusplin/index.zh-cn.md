@@ -2,7 +2,7 @@
 title: 基于Anusplin的气象插值
 author: Chaoseco
 date: '2022-04-08'
-slug: index.zh-cn
+slug: Anusplin.zh-cn
 categories:
   - GIS
 tags:

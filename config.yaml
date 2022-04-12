@@ -66,7 +66,7 @@ Params:
   sidebar: 
     home: right   # Configure layout for home page
     list: false   # Configure layout for list pages: right/left/false
-    single: false # Configure layout for single pages
+    single: right # Configure layout for single pages
     widgets:
       - search
       - recent
