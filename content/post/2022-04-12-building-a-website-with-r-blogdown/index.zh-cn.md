@@ -36,21 +36,21 @@ thumbnail: ''
 ##### 3. 安装Blogdwon, Hugo
 
 - 在Rstudio中运行如下代码：
-```r
-install.packages("blogdown")
-library(blogdown)
-blogdown::install_hugo()
-```
+  ```r
+  install.packages("blogdown")
+  library(blogdown)
+  blogdown::install_hugo()
+  ```
 
 ##### 4. 创建网站
 - Rstudio中运行如下代码：
-``` r
-blogdown::new_site(theme = "Vimux/Mainroad") # theme可根据个人喜好修改
-```
-- 完成后，使用一下命令检查新建网站是否正常运行：
-``` r
-blogdown::serve_site()
-```
+  ``` r
+  blogdown::new_site(theme = "Vimux/Mainroad") # theme可根据个人喜好修改
+  ```
+- 完成后，使用以下命令检查新建网站是否正常运行：
+  ``` r
+  blogdown::serve_site()
+  ```
 - 后续可修改config.toml/config.yaml文件以对网站进行配置修改。
 
 ##### 5. 使用Git管理网站更新
@@ -62,13 +62,13 @@ blogdown::serve_site()
 - 此外，也可在git bash中对更新进行管理（此方法一般会比Rstudio中速度快些），具体如下：
   - 首先，通过cd命令将工作路径切换到网站本地文件夹
   - 随后，逐步运行如下命令：
-  ``` toml
-  git status  # To see what’s going on with the files in your repository
-  git add --all # Add the files to be tracked
-  git commit -m "first commit/Whatever u want" # Commit file changes
-  git push # Push files to Github
-  
-  ```
+    ``` toml
+    git status  # To see what’s going on with the files in your repository
+    git add --all # Add the files to be tracked
+    git commit -m "first commit/Whatever u want" # Commit file changes
+    git push # Push files to Github
+    
+    ```
 
 ##### 6. 在Netlify上部署
 - 前往<https://app.netlify.com/>，可通过GitHub登陆；
