@@ -69,6 +69,16 @@ thumbnail: ''
     git push # Push files to Github
     
     ```
+    PS: git使用`git commit`命令后显示Author identity unknown的话，输入以下命令：
+    ```toml
+    git config user.email "Your email address"
+    git config user.name "Yout name"
+    ```
+  
+    此外，运行`git push`后若报错（如下），很有可能是网络不稳定，连接超时导致的，可多尝试几次即可解决
+    ```toml
+    fatal: unable to access 'https://github.com/chaoseco/MyBLOG/': OpenSSL SSL_read: Connection was reset, errno 10054
+    ```
 
 ##### 6. 在Netlify上部署
 - 前往<https://app.netlify.com/>，可通过GitHub登陆；
