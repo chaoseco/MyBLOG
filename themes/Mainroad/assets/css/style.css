@@ -385,7 +385,7 @@ select {
 
 /* Header */
 .header {
-	background: #fff;
+	background: url(/img/banner.png) no-repeat;
 }
 
 .logo {
@@ -406,7 +406,7 @@ select {
 }
 
 .logo__text {
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 .logo--mixed .logo__item {

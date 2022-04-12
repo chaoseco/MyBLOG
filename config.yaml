@@ -82,7 +82,7 @@ Params:
       email: "chaoseco@fake.com"
   logo:
     # image: "img/avatar1.jpg"
-    title: "Chaoseco"
+    title: "ChaosEco"
     subtitle: "Life Recording"
   post_meta:
     - date
