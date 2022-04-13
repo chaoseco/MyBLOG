@@ -505,7 +505,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .menu__item:hover {
-	background: {{ $highlightColor }};
+	background: #fff;
 }
 
 .menu__item:first-child {
@@ -513,7 +513,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .menu__item--active {
-	background: {{ $highlightColor }};
+	background: #ff0000;
 }
 
 .menu__link {

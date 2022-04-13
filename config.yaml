@@ -65,7 +65,7 @@ Params:
   readmore: true
   sidebar: 
     home: right   # Configure layout for home page
-    list: false   # Configure layout for list pages: right/left/false
+    list: right   # Configure layout for list pages: right/left/false
     single: right # Configure layout for single pages
     widgets:
       - search
