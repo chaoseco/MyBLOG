@@ -136,7 +136,7 @@ textarea {
 	font-weight: 700;
 	color: #fff;
 	white-space: pre-line;
-	background: #505050;
+	background: #8E98AE;
 }
 
 .btn:hover {
@@ -501,11 +501,11 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 .menu__list {
 	list-style: none;
-	background: #505050;
+	background: #8E98AE;
 }
 
 .menu__item:hover {
-	background: #fff;
+	background: {{ $highlightColor }};
 }
 
 .menu__item:first-child {
@@ -513,7 +513,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 }
 
 .menu__item--active {
-	background: #ff0000;
+	background: {{ $highlightColor }};
 }
 
 .menu__link {
@@ -1170,8 +1170,8 @@ textarea {
 	padding: 10px 25px;
 	font-size: 12px;
 	font-size: .75rem;
-	color: #999;
-	background: #2a2a2a;
+	color: #fff;
+	background: #8E98AE;
 	border-top: 3px solid #999;
 }
 
@@ -1188,7 +1188,7 @@ textarea {
 }
 
 .footer a {
-	color: #fff;
+	color: #303030;
 }
 
 .footer a:hover {

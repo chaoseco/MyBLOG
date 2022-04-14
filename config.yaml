@@ -89,5 +89,5 @@ Params:
     - categories
   style:
     vars:
-      highlightColor: "#0245fd" # 页面高亮 (链接等) 颜色
+      highlightColor: "#53565C" # 页面高亮 (链接等) 颜色
 
