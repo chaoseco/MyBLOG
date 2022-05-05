@@ -83,7 +83,7 @@ Params:
   logo:
     # image: "img/avatar1.jpg"
     title: "ChaosEco"
-    subtitle: "Life Recording"
+    subtitle: "我见青山多妩媚，料青山、见我应如是"
   post_meta:
     - date
     - categories
