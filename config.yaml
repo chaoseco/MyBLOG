@@ -63,6 +63,9 @@ Params:
   pager: yes
   googleFontsLink: "/res/font/opensans/opensans.css"
   readmore: true
+  mathjax: true # Enable MathJax
+  mathjaxPath: "https://cdn.mathjax.org/mathjax/latest/MathJax.js" # Specify MathJax path
+  mathjaxConfig: "TeX-AMS-MML_SVG" # MathJax config
   sidebar: 
     home: right   # Configure layout for home page
     list: right   # Configure layout for list pages: right/left/false
