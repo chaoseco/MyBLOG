@@ -4,7 +4,7 @@ author: ChaosEco
 date: '2022-04-12'
 slug: building-a-website-with-r-blogdown.zh-cn
 categories:
-  - R
+  - Blogdown
 tags:
   - blogdown
 description: ''
